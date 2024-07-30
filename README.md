@@ -1,11 +1,11 @@
 # kube-capacity
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/robscott/kube-capacity?v=1)](https://goreportcard.com/report/github.com/robscott/kube-capacity) [![CircleCI](https://circleci.com/gh/robscott/kube-capacity.svg?style=svg)](https://circleci.com/gh/robscott/kube-capacity)
+[![Go Report Card](https://goreportcard.com/badge/github.com/emre-aydin/kube-capacity?v=1)](https://goreportcard.com/report/github.com/emre-aydin/kube-capacity) [![CircleCI](https://circleci.com/gh/robscott/kube-capacity.svg?style=svg)](https://circleci.com/gh/robscott/kube-capacity)
 
 This is a simple CLI that provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster. It attempts to combine the best parts of the output from `kubectl top` and `kubectl describe` into an easy to use CLI focused on cluster resources.
 
 ## Installation
-Go binaries are automatically built with each release by [GoReleaser](https://github.com/goreleaser/goreleaser). These can be accessed on the GitHub [releases page](https://github.com/robscott/kube-capacity/releases) for this project.
+Go binaries are automatically built with each release by [GoReleaser](https://github.com/goreleaser/goreleaser). These can be accessed on the GitHub [releases page](https://github.com/emre-aydin/kube-capacity/releases) for this project.
 
 ### Homebrew
 This project can be installed with [Homebrew](https://brew.sh/):

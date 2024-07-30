@@ -20,12 +20,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/robscott/kube-capacity/pkg/kube"
+	"github.com/emre-aydin/kube-capacity/pkg/kube"
+	k8taints "github.com/emre-aydin/kube-taint-parser/taints"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
-	k8taints "k8s.io/kubernetes/pkg/util/taints"
-	v1beta1 "k8s.io/metrics/pkg/apis/metrics/v1beta1"
+	"k8s.io/metrics/pkg/apis/metrics/v1beta1"
 	metrics "k8s.io/metrics/pkg/client/clientset/versioned"
 )
 
@@ -80,9 +80,9 @@ func getPodsAndNodes(clientset kubernetes.Interface, excludeTainted bool, podLab
 
 	if nodeTaints != "" {
 		taints := strings.Split(nodeTaints, ",")
-		taintsToAdd, taintsToRemove, error := k8taints.ParseTaints(taints)
-		if error != nil {
-			fmt.Printf("Error parsing taint parameter: %v\n", error)
+		taintsToAdd, taintsToRemove, err := k8taints.ParseTaints(taints)
+		if err != nil {
+			fmt.Printf("Error parsing taint parameter: %v\n", err)
 			os.Exit(3)
 		}
 

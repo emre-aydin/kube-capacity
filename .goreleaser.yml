@@ -45,7 +45,7 @@ brews:
   # Brew fails from multiple 32-bit arm versions.
   # Specify which version should be used.
   goarm: 6
-  homepage: https://github.com/robscott/kube-capacity
+  homepage: https://github.com/emre-aydin/kube-capacity
   license: apache-2.0
   description: kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
   test: |
